@@ -1,0 +1,192 @@
+
+:root{ /*variáveis para as cores do site que são alteradas conforme a escola do usuário*/
+    --corDeMudança: red;
+    --corBotãoCesar: red;
+    --corBotãoBase: blueviolet;
+}
+
+@font-face {
+    font-family: 'Future';
+    src: url('/includes/SuperCar-ExpMLDemo.otf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #212123;
+}
+
+body video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+}
+
+/*Titulo do Site*/
+
+header{
+    font-family: 'Future';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.titulo{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: 4px;
+    color: rgb(255, 255, 255);
+}
+
+.LetraMaior{
+    font-size: 50px;
+    color: var(--corDeMudança);
+}
+
+/*------------------------------------------*/
+
+/*Botões de escolha do algoritmo*/
+
+#Algoritmo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    border-radius: 3px;
+    padding: 15px;
+    margin: 10px;
+    display: inline-block;
+    font-family: Verdana;
+    letter-spacing: -1px;
+    user-select: none;
+    transition: all .195s ease-in-out;
+    cursor: pointer;
+}
+
+a#cesar:hover {
+    transform: translateX(5px) translateY(5px);
+    box-shadow: var(--corBotãoCesar) 7px 9px 0px;
+}
+
+a#base:hover {
+    transform: translateX(5px) translateY(5px);
+    box-shadow: var(--corBotãoBase) 7px 9px 0px;
+}
+
+a#cesar{
+    border: 1px solid var(--corBotãoCesar);
+    color: var(--corBotãoCesar);
+    box-shadow: var(--corBotãoCesar) 3px 3px 0px;
+}
+
+a#base{
+    border: 1px solid var(--corBotãoBase);
+    color: var(--corBotãoBase);
+    box-shadow: var(--corBotãoBase) 3px 3px 0px;
+}
+/*----------------------------------------*/
+
+/* Caixa de Entrada + botão de Confirmar*/
+
+#EntradaMsg{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#EntradaMsg input{
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#EntradaMsg button{
+    width: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid var(--corDeMudança);
+    box-shadow: var(--corDeMudança) 3px 3px 0px;
+}
+
+#btnInput{
+    color: var(--corDeMudança);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*----------------------------------------*/
+
+/*Switch para escolher entre codificar e decodificar*/
+
+#switch{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#switch p{
+    font-size: 20px;
+    color: var(--corDeMudança);
+    margin: 15px
+}
+
+#CHK{
+    display: none;
+}
+
+.switch{
+    position: relative;
+    background-color: gray;
+    width: 40px;
+    height: 20px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.slider{
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    transition: all .5s ease-in-out;
+}
+
+#CHK:checked ~ .switch{
+    background-color: var(--corDeMudança);
+}
+
+
+
+#CHK:checked ~ .switch .slider{
+    transform: translateX(12px);
+}
+
+/*----------------------------------------*/
+
+/*Caixa de Saída*/
+
+textarea{
+    display: flex;
+    margin: auto;
+    resize: none;
+    border-radius: 5px;
+
+}
+
+/*----------------------------------------*/

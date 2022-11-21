@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Imitation Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <video id="video" autoplay muted loop src="/includes/Red Spinning Particles - HD Background Loop.mp4"></video>
+
+    <header>
+        <div class="titulo">
+          <h1 class="LetraMaior">T</h1>
+          <h1 class="Letramenor">he</h1>   
+        </div>
+        <div class="titulo">
+          <h1 class="LetraMaior">I</h1>
+          <h1 class="Letramenor">mitation</h1>   
+        </div>
+        <div class="titulo">
+          <h1 class="LetraMaior">S</h1>
+          <h1 class="Letramenor">ite</h1>   
+        </div>
+    </header>
+    
+    <div id="Algoritmo">
+      <a onclick="mudarCorCesar()" id="cesar">Cifra de Cesar</a>
+      <a onclick="mudarCorBase()" id="base">Base 64</a>
+  </div>
+    
+
+    <div id="EntradaMsg">
+      <input id="msgInput" type="text" placeholder="Digite a messagem">
+      <button onclick="escolhercodigo()" id="btnInput">Codificar</button>
+  </div>
+    
+
+    <div id="switch">
+      <p class="letrasSwitch">Codificador</p>
+      <input onclick="escolherSwitch()" type="checkbox" id="CHK">
+      <label for="CHK" class="switch">
+      <span class="slider"></span>
+      </label>
+      <p class="letrasSwitch">Decodificador</p>
+    </div>
+    
+
+    <textarea readonly name="" id="saída" cols="30" rows="7"></textarea>
+</body>
+
+  <script src="script.js"></script>
+
+</html>
